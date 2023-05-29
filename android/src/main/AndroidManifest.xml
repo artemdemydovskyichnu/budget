@@ -1,0 +1,54 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.demydovskyi.my.budgetvisualizer">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name="com.demydovskyi.my.budgetvisualizer.activities.MainActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.demydovskyi.my.budgetvisualizer.activities.SettingsActivity"
+            android:screenOrientation="portrait"
+            android:parentActivityName="com.demydovskyi.my.budgetvisualizer.activities.MainActivity">
+            <!-- Parent activity meta-data to support Android 4.0 and lower -->
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.demydovskyi.my.budgetvisualizer.activities.MainActivity"/>
+        </activity>
+
+        <activity android:name="com.demydovskyi.my.budgetvisualizer.activities.CategoryEditActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible"
+            android:parentActivityName="com.demydovskyi.my.budgetvisualizer.activities.MainActivity">
+            <!-- Parent activity meta-data to support Android 4.0 and lower -->
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.demydovskyi.my.budgetvisualizer.activities.MainActivity"/>
+        </activity>
+
+        <activity android:name="com.demydovskyi.my.budgetvisualizer.activities.ExpenseEditActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible"
+            android:parentActivityName="com.demydovskyi.my.budgetvisualizer.activities.MainActivity">
+            <!-- Parent activity meta-data to support Android 4.0 and lower -->
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.demydovskyi.my.budgetvisualizer.activities.MainActivity"/>
+        </activity>
+
+        <provider
+            android:authorities="com.demydovskyi.my.budgetvisualizer.provider"
+            android:name="com.demydovskyi.my.budgetvisualizer.providers.ExpensesProvider" />
+
+    </application>
+
+</manifest>

@@ -1,0 +1,12 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@android:color/holo_green_dark</item>
+        <item name="colorPrimaryDark">@android:color/holo_green_light</item>
+        <item name="colorAccent">#105E07</item>
+
+        <item name="windowActionModeOverlay">true</item>
+    </style>
+
+</resources>
